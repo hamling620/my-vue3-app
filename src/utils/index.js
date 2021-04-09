@@ -20,6 +20,6 @@ export function throttle (fn, delay = 500) {
     timer = setTimeout(() => {
       timer = null
       fn.apply(this, args)
-    }, dely)
+    }, delay)
   }
 }
