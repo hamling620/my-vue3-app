@@ -29,14 +29,15 @@ const LazyLoad = {
   }
 }
 
+// 注意Vu3生命周期的改变
 export default {
   install (app, options) {
     const defaultSrc = options.default
-    app.directive('v-lazy', {
-      binding (el, binding) {
+    app.directive('lazy', {
+      beforeMount (el, binding) {
         LazyLoad.init(el, binding.value, defaultSrc)
       },
-      inserted (el) {
+      mounted (el) {
         if (IntersectionObserver) {
           LazyLoad.observe(el)
         } else {

@@ -3,8 +3,8 @@
 ## 一. Vue的高阶应用
 
 ### 1. props
-### 2. slot
-### 3. directives
+### 2. slot (完成)
+### 3. directives （完成）
 ### 4. plugin
 
 ## 二. 组件
