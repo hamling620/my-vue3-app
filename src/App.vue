@@ -1,26 +1,15 @@
 <template>
   <div class="container">
-    {{ show ? '隐藏' : '显示' }}<ISwitch v-model:value="show" />
-    <hr>
-    <ThemeDemo v-if="show" />
+    <SlideDemo />
   </div>
 </template>
 
 <script>
-import { ref } from 'vue'
-import ISwitch from '@/components/ISwitch'
-import ThemeDemo from '@/doc_study/provide&inject'
+import SlideDemo from '@/views/SlideDemo'
 export default {
   name: 'App',
   components: {
-    ISwitch,
-    ThemeDemo
-  },
-  setup () {
-    const show = ref(true)
-    return {
-      show
-    }
+    SlideDemo
   }
 }
 </script>
